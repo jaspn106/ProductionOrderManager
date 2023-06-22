@@ -1,0 +1,27 @@
+.container {
+  @apply flex flex-row
+  bg-green-400 rounded-md 
+  justify-between
+  
+  px-3;
+}
+
+.title {
+}
+
+.subTitle {
+}
+
+.orderContainer {
+  @apply flex flex-row;
+}
+
+.orderHeader {
+}
+
+.orderSubHeader {
+}
+
+.orderInfo {
+  @apply flex flex-col;
+}

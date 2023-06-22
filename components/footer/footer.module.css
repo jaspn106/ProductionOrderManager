@@ -1,0 +1,15 @@
+.container {
+  @apply flex flex-row 
+  justify-between
+  h-6 text-xs
+  bg-green-500 
+  min-w-full
+  p-2
+  items-center;
+}
+
+.imgContainer {
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
