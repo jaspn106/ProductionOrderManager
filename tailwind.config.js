@@ -5,29 +5,25 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        inter: ["Inter", "sans-serif"],
-      },
-      colors: {
-        "black-100": "#2B2C35",
-        "primary-blue": {
-          DEFAULT: "#2B59FF",
-          100: "#F5F8FF",
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        lightTheme: {
+          primary: "#f4aa3a",
+          secondary: "#f4f4a1",
+          accent: "#1be885",
+          neutral: "#272136",
+          "base-100": "#ffffff",
+          info: "#778ad4",
+          success: "#23b893",
+          warning: "#f79926",
+          error: "#ea535a",
+          body: {
+            "background-color": "#e3e6e6",
+          },
         },
-        "secondary-orange": "#f79761",
-        "light-white": {
-          DEFAULT: "rgba(59,60,152,0.03)",
-          100: "rgba(59,60,152,0.02)",
-        },
-        grey: "#747A88",
       },
-      backgroundImage: {
-        'pattern': "url('/pattern.png')",
-        'hero-bg': "url('/hero-bg.png')"
-      }
-    },
+    ],
   },
-  plugins: [],
 };

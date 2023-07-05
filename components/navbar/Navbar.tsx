@@ -1,10 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import styles from "./navbar.module.css";
 // components
 import { GoogleSignInButton } from "@/components/buttons/authButttons";
-import Image from "next/image";
-import logo from "~images/logo.png";
+import Container from "../Container";
+import Logo from "./logo";
 
 const links = [
   {
@@ -19,20 +18,24 @@ const links = [
   },
 ];
 
-export default function Navbar(props: unknown) {
+const Navbar = () => {
   return (
-    <div className={styles.container}>
-      <Link href="/dashboard" className={styles.logo}>
-        Production Order Tracker
-      </Link>
-      <div className={styles.links}>
-        {links.map((link) => (
-          <Link key={link.id} href={link.url} className={styles.link}>
+    <div className="flex flex-row w-full fixed z-10 shadow-sm">
+      <div className=" py-4 border-b-[1px]">
+        <Container>
+          <div className=" flex flex-row items-center justify-between gap-3 md:gap-0">
+            <Logo />
+          </div>
+        </Container>
+        {/* {links.map((link) => (
+          <Link key={link.id} href={link.url}>
             {link.title}
           </Link>
-        ))}
-        <GoogleSignInButton />
+        ))} */}
+        {/* <GoogleSignInButton /> */}
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
